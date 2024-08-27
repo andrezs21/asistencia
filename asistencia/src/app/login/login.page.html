@@ -10,27 +10,30 @@
     <img src="assets/images/logo.png" alt="Imagen Circular">
   </div>
 
-  <ion-list>
-    <ion-item>
-      <ion-label position="floating">Usuario</ion-label>
-      <br>
-      <ion-input placeholder="nombre de usuario"></ion-input>
-    </ion-item>
+  <!-- Contenedor de la cajita -->
+  <div class="login-container">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Usuario</ion-label>
+        <br>
+        <ion-input placeholder="nombre de usuario"></ion-input>
+      </ion-item>
 
-    <ion-item>
-      <ion-label position="floating">Contraseña</ion-label>
-      <br>
-      <ion-input type="password" placeholder="********">
-        <ion-input-password-toggle slot="end"></ion-input-password-toggle>
-      </ion-input>
-    </ion-item>
-  </ion-list>
-  <br>
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <br>
+        <ion-input type="password" placeholder="********">
+          <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+        </ion-input>
+      </ion-item>
+    </ion-list>
+    <br>
 
-  <ion-button expand="block" class="login-button">Iniciar Sesión</ion-button>
+    <ion-button expand="block" class="login-button">Iniciar Sesión</ion-button>
 
-  <!-- Contenedor para los botones adicionales -->
-  <div class="additional-buttons">
-    <ion-button expand="block" fill="clear" class="forgot-password-button">Olvidé mi contraseña</ion-button>
+    <!-- Contenedor para los botones adicionales -->
+    <div class="additional-buttons">
+      <ion-button expand="block" fill="clear" class="forgot-password-button">Olvidé mi contraseña</ion-button>
+    </div>
   </div>
 </ion-content>
