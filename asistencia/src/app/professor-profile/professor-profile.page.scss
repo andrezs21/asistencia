@@ -4,6 +4,8 @@
   margin-bottom: 20px;
 }
 
+
+
 .profesor-image {
   display: flex;
   justify-content: center;
@@ -28,6 +30,7 @@ ion-card {
 
 ion-item {
   --background: #f8f9fa;
+  color: black;
   border-radius: 10px;
   margin-bottom: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

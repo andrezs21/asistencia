@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-generar-qr',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GenerarQrPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  volver(){
+    this.router.navigate(['/professor-profile'])
+  }
 
   ngOnInit() {
   }

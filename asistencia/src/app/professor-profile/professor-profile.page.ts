@@ -11,6 +11,10 @@ export class ProfessorProfilePage implements OnInit {
 
   constructor(private router: Router) { }
 
+  generar_qr(){
+    this.router.navigate(['/generar-qr'])
+  }
+
   volver(){
     this.router.navigate(['/login'])
   }
