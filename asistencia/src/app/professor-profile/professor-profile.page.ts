@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
 
 
 @Component({
@@ -8,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfessorProfilePage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  volver(){
+    this.router.navigate(['/login'])
+  }
 
   ngOnInit() {
   }

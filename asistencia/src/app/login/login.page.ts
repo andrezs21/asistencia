@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'; 
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -8,10 +9,18 @@ import { Router } from '@angular/router';
 })
 export class LoginPage implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,private formBuilder: FormBuilder) {
 
-  navegar(){
-    this.router.navigate(['/home']);
+
+ 
+   }
+
+  irmenu(){   
+    this.router.navigate(['/professor-profile']);
+  }
+
+  iniciarSesion(){
+
   }
 
   ngOnInit() {
