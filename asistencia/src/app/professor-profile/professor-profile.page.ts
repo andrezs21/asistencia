@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Route, Router } from '@angular/router';
+import { Route, Router ,NavigationExtras } from '@angular/router';
 
 
 @Component({
@@ -10,6 +10,7 @@ import { Route, Router } from '@angular/router';
 export class ProfessorProfilePage implements OnInit {
 
   constructor(private router: Router) { }
+
 
   generar_qr(){
     this.router.navigate(['/generar-qr'])
