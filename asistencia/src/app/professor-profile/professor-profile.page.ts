@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Route, Router } from '@angular/router';
-
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-professor-profile',
@@ -8,18 +7,28 @@ import { Route, Router } from '@angular/router';
   styleUrls: ['./professor-profile.page.scss'],
 })
 export class ProfessorProfilePage implements OnInit {
+  receivedUser: string | undefined;
+  receivedPass: string | undefined;
 
-  constructor(private router: Router) { }
-
-  generar_qr(){
-    this.router.navigate(['/generar-qr'])
+  constructor(private route: ActivatedRoute, private router: Router) { 
+    const navigation = this.router.getCurrentNavigation();
+    if (navigation?.extras.state) {
+      this.receivedUser = navigation.extras.state['user'];
+      this.receivedPass = navigation.extras.state['pass'];
+    } else {
+      this.receivedUser = 'Usuario desconocido';
+      this.receivedPass = 'N/A';
+    }
   }
 
-  volver(){
-    this.router.navigate(['/login'])
+  volver() {
+
+    this.router.navigate(['/login']);
   }
 
-  ngOnInit() {
+  generar_qr() {
+
   }
 
+  ngOnInit() {}
 }

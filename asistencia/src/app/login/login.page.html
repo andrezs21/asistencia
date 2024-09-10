@@ -8,25 +8,26 @@
   <div class="image-circle">
     <img src="assets/images/logo.png" alt="Imagen Circular">
   </div>
-    <form>
-        <ion-item>
-          <ion-label position="floating" >Usuario</ion-label>
-          <br>
-          <ion-input placeholder="nombre de usuario"></ion-input>
-        </ion-item>
 
-        <ion-item>
-          <ion-label position="floating">Contraseña</ion-label>
-          <br>
-          <ion-input type="password" placeholder="********">
-            <ion-input-password-toggle slot="end"></ion-input-password-toggle>
-          </ion-input>
-        </ion-item>      
-    <ion-button expand="block" class="login-button" (click)="irmenu()">Iniciar Sesión</ion-button>
+  <form [formGroup]="usuario">
+    <ion-item>
+      <ion-label position="floating">Usuario</ion-label>
+      <br>
+      <ion-input placeholder="nombre de usuario" formControlName="user"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <br>
+      <ion-input type="password" placeholder="********" formControlName="pass"></ion-input>
+    </ion-item>
+    <br>
+    <br>
+
+    <ion-button expand="block" class="login-button" (click)="login()">Iniciar Sesión</ion-button>
   </form>
-       
-    <!-- Contenedor para los botones adicionales -->
-    <div class="additional-buttons">
-      <ion-button expand="block" fill="clear" class="forgot-password-button">Olvidé mi contraseña</ion-button>
-    </div>
+
+  <div class="additional-buttons">
+    <ion-button expand="block" fill="clear" class="forgot-password-button">Olvidé mi contraseña</ion-button>
+  </div>
 </ion-content>
