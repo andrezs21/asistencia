@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-professor-profile',
@@ -10,7 +10,7 @@ export class ProfessorProfilePage implements OnInit {
   receivedUser: string | undefined;
   receivedPass: string | undefined;
 
-  constructor(private route: ActivatedRoute, private router: Router) { 
+  constructor(private router: Router) { 
     const navigation = this.router.getCurrentNavigation();
     if (navigation?.extras.state) {
       this.receivedUser = navigation.extras.state['user'];
@@ -21,14 +21,13 @@ export class ProfessorProfilePage implements OnInit {
     }
   }
 
-  volver() {
+  ngOnInit() {}
 
+  volver() {
     this.router.navigate(['/login']);
   }
 
-  generar_qr() {
-
+  navegar(asignatura: string) {
+    this.router.navigate(['/asignatura', asignatura]);
   }
-
-  ngOnInit() {}
 }
