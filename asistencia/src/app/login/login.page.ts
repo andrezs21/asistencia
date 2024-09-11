@@ -1,6 +1,4 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { FormGroup, FormControl, Validators } from '@angular/forms'; 
+
 
 @Component({
   selector: 'app-login',
@@ -9,14 +7,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class LoginPage {
 
-  usuario: FormGroup;
 
-  constructor(private router: Router) {
-
-    this.usuario = new FormGroup({
-      user: new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(20)]),
-      pass: new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(20)]),
-    });
   }
 
 
