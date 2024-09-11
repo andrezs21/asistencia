@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Route, Router ,NavigationExtras } from '@angular/router';
 
 
 @Component({
@@ -8,19 +7,19 @@ import { Route, Router ,NavigationExtras } from '@angular/router';
   styleUrls: ['./professor-profile.page.scss'],
 })
 export class ProfessorProfilePage implements OnInit {
+  receivedUser: string | undefined;
+  receivedPass: string | undefined;
 
-  constructor(private router: Router) { }
 
-
-  generar_qr(){
-    this.router.navigate(['/generar-qr'])
   }
 
-  volver(){
-    this.router.navigate(['/login'])
+  ngOnInit() {}
+
+  volver() {
+    this.router.navigate(['/login']);
   }
 
-  ngOnInit() {
+  navegar(asignatura: string) {
+    this.router.navigate(['/asignatura', asignatura]);
   }
-
 }
