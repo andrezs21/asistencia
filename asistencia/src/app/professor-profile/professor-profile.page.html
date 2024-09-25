@@ -1,9 +1,5 @@
+<br>
 <ion-content>
-  <ion-button size="small" class="boton-salir" (click)="volver()">
-    <ion-icon slot="start" name="arrow-back"></ion-icon>
-    Volver
-  </ion-button>
-
   <div class="profesor-image">
     <img src="assets/images/profesor.png" alt="Foto del Profesor">
   </div>
@@ -18,45 +14,18 @@
     </ion-card-header>
     <ion-card-content>
       <ion-list>
-        <ion-item lines="full" button="true" (click)="navegar('ingles')">
+
+        <ion-item  lines="full" button="true" (click)="navegar(curso.nombre)" *ngFor="let curso of cursos">
           <ion-thumbnail slot="start">
-            <img alt="Inglés" src="assets/images/reino-unido.png" />
+            <img alt="Inglés" src={{curso.imagen}}/>
           </ion-thumbnail>
           <ion-label>
-            <h2>Inglés</h2>
-            <p>Sección 1 - 15 Alumnos</p>
+            <h2>{{curso.nombre}}</h2>
+            <p> {{curso.seccion}}</p>
           </ion-label>
+          <ion-button></ion-button>
         </ion-item>
 
-        <ion-item lines="full" button="true" (click)="navegar('espanol')">
-          <ion-thumbnail slot="start">
-            <img alt="Español" src="assets/images/espana.png" />
-          </ion-thumbnail>
-          <ion-label>
-            <h2>Español</h2>
-            <p>Sección 2 - 16 Alumnos</p>
-          </ion-label>
-        </ion-item>
-
-        <ion-item lines="full" button="true" (click)="navegar('portugues')">
-          <ion-thumbnail slot="start">
-            <img alt="Portugués" src="assets/images/portugal.png" />
-          </ion-thumbnail>
-          <ion-label>
-            <h2>Portugués</h2>
-            <p>Sección 3 - 15 Alumnos</p>
-          </ion-label>
-        </ion-item>
-
-        <ion-item lines="full" button="true" (click)="navegar('frances')">
-          <ion-thumbnail slot="start">
-            <img alt="Francés" src="assets/images/francia.png" />
-          </ion-thumbnail>
-          <ion-label>
-            <h2>Francés</h2>
-            <p>Sección 4 - 20 Alumnos</p>
-          </ion-label>
-        </ion-item>
       </ion-list>
     </ion-card-content>
   </ion-card>
